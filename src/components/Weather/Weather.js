@@ -25,9 +25,9 @@ class Weather extends Component {
       <div>
         {this.props.country && this.props.city
         && (
-        <p>
+        <p className="weather__key">
           Location:
-          <span>
+          <span className="weather__value">
             {this.props.city}
             ,
             {this.props.country}
@@ -37,27 +37,27 @@ class Weather extends Component {
         }
         {this.props.temperature
         && (
-        <p>
+        <p className="weather__key">
           Temperature:
-          <span>{this.props.temperature}</span>
+          <span className="weather__value">{this.props.temperature}</span>
         </p>
         )}
         {this.props.humidity
         && (
-        <p>
+        <p className="weather__key">
           Humidity:
-          <span>{this.props.humidity}</span>
+          <span className="weather__value">{this.props.humidity}</span>
         </p>
         )}
         {this.props.description
         && (
-        <p>
+        <p className="weather__key">
           Conditions:
-          <span>{this.props.description}</span>
+          <span className="weather__value">{this.props.description}</span>
         </p>
         )}
         {this.props.error
-        && <p>{this.props.error}</p>}
+        && <p className="weather__key">{this.props.error}</p>}
       </div>
     );
   }
