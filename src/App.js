@@ -43,7 +43,16 @@ class App extends Component {
           error: 'Please enter the values.',
         });
       }
-    }).catch(() => {});
+    }).catch(() => {
+      this.setState({
+        temperature: null,
+        city: null,
+        country: null,
+        humidity: null,
+        description: null,
+        error: 'Please enter the values.',
+      });
+    });
   }
 
   render() {
@@ -57,7 +66,6 @@ class App extends Component {
                   <Titles />
                 </div>
                 <div className="col-xs-7 form-container">
-
                   <Form getWeather={this.getWeather} />
                   <Weather
                     temperature={this.state.temperature}
